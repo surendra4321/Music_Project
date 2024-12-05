@@ -7,17 +7,23 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-@Table(name="music")
+
+@Table(name = "music")
 @Entity
 public class MusicEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String albumName;
 	private Date releseDate;
 	private int playcount;
-	
+
+	public MusicEntity() {
+		super();
+
+	}
+
 	public MusicEntity(Long id, String title, String albumName, Date releseDate, int playcount) {
 		super();
 		this.id = id;
@@ -72,9 +78,5 @@ public class MusicEntity {
 		return "MusicEntity [id=" + id + ", title=" + title + ", albumName=" + albumName + ", releseDate=" + releseDate
 				+ ", playcount=" + playcount + "]";
 	}
-	
-	
-	
-	
 
 }
