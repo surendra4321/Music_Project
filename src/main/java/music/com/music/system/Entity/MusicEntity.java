@@ -68,7 +68,6 @@ public class MusicEntity {
 	public int getPlaycount() {
 		return playcount;
 	}
-
 	public void setPlaycount(int playcount) {
 		this.playcount = playcount;
 	}
